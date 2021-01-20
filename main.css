@@ -1,0 +1,145 @@
+:root {
+  /* --clip-path-background: #00172D; */
+  --clip-path-background: black;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(250, 250, 250, 1);
+  font-family: 'Kaushan Script', cursive;
+}
+
+.heading {
+  font-family: 'Permanent Marker', cursive, monospace;
+}
+
+.header {
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 84px;
+  padding: 2px 6px 2px 6px;
+  font-size: 28px;
+}
+
+.header h1 {
+  width: 204px;
+  padding: 0px 8px 0px 8px;
+}
+
+.header h1:first-child {  
+  text-align: end;
+}
+
+.logo {
+  max-height: 100%;
+  width: auto;
+  justify-items: center;
+}
+
+section {
+  min-height: 500px;
+}
+
+.clippath {
+  background-color: var(--clip-path-background);
+  width: 100%;
+  height: 50px;
+}
+
+.right-clippath {
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+
+.left-clippath {
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+.colored-section {
+  background-color: var(--clip-path-background);
+  color: white;
+}
+
+.brushed-mask {
+  mask-image: url('./images/b_one.png');
+  mask-size: 100vmin;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+
+/* flex sizes */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col-1, .col-2, 
+.col-sm-1, .col-sm-2
+{
+  position: relative;
+  width: 100%;
+}
+
+.col-1 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-2 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767.98px) {
+  .col-sm-1 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .col-sm-2 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .order-first {
+    -ms-flex-order: -1;
+    order: -1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .header {
+    font-size: 16px;
+  }
+
+  .header h1 {
+    width: 125px;
+  }
+}
