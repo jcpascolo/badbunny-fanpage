@@ -1,0 +1,31 @@
+{
+  "name": "badbunny-fanpage",
+  "version": "1.0.0",
+  "description": "A static project to try LitElement and to have fan with a great artist",
+  "main": "main.js",
+  "scripts": {
+    "docs:serve": "es-dev-server --root-dir=docs --node-resolve --watch",
+    "serve": "es-dev-server --node-resolve --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcpascolo/badbunny-fanpage.git"
+  },
+  "keywords": [
+    "fanpage",
+    "badBunny",
+    "LitElement"
+  ],
+  "author": "Juan Carlos Pascolo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcpascolo/badbunny-fanpage/issues"
+  },
+  "homepage": "https://github.com/jcpascolo/badbunny-fanpage#readme",
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  },
+  "devDependencies": {
+    "es-dev-server": "^2.1.0"
+  }
+}
